@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursevi | Beelengual</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+</head>
+<body>
+    
+    <nav class="meni-container">
+        <div class="logo">
+            <h1>Beelengual</h1>
+        </div>
+        <div class="meni">
+        <a href="index.html">Početna</a>
+        <a href="about.html">O nama</a>
+        <a href="kursevi.html">Kursevi</a>
+        <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="kidscourses-container">
+        
+        <div class="kidscourses-info">
+            <h4>KURSEVI ZA DECU</h4>
+                <br>
+            <ul>
+                <li>Engleski za decu od 2 do 5 godina (PlaySchool programi)</li>
+                <li>Engleski za osnovce</li>
+                <li>Francuski za osnovce</li>
+                <li>Nemački za osnovce</li>
+                <li>Engleski za srednjoškolce</li>
+                <li>Francuski za srednjoškolce</li>
+                <li>Nemački za srednjoškolce</li>
+                <li>Individualna nastava</li>
+                <li>Korektivna nastava</li>
+                <li>Priprema za međunarodne ispite (TOEFL, Cambridge, SAT)</li>
+            </ul>
+        </div>
+        <div class="kidscourses-images">
+            <img src="images/ucionica4.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="adultscourses-container">
+        <div class="adultscourses-info">
+            <h4>KURSEVI ZA ODRASLE</h4>
+            <br>
+            <ul>
+                <li>Engleski jezik</li>
+                <li>Nemački jezik</li>
+                <li>Francuski jezik</li>
+                <li>Italijanski jezik</li>
+                <li>Španski jezik</li>
+                <li>Konverzacijski kursevi (engleski, nemački, francuski)</li>
+                <li>Ubrzani kursevi (engleski, nemački)</li>
+                <li>Refreshment courses</li>
+                <li>Business English</li>
+            </ul>
+        </div>
+        <div class="adultscourses-images">
+            <img src="images/kursodrasli.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h3>PRIJAVA ZA KURS</h3>
+        <br><br>
+        <form action="" class="form" name = "form">
+            <div class="form-section1">
+                <div class="form-section1-content">
+                    <div class="form-section1-left">
+                        <label for="name">Ime</label>
+                        <br>
+                    <label for="surname">Prezime</label>
+                    <br>
+                    <label for="email">Email adresa</label>
+                    <br>
+                    <label for="phone">Broj telefona</label>
+                    </div>
+                    <div class="form-section1-right">
+                        <input type="text" class="name" id="name"  required>
+                        <br>
+                        <input type="text" class="surname" id= "surname" required>
+                        <br>
+                        <input type="text" class="email" id="email" required>
+                        <br>
+                        <input type="text" class="phone" id="phone" maxlength="13" placeholder="+3816********">
+                    </div>
+                </div>
+                
+                <button class="btn" id="btn1" type="button" >Dalje</button>
+                <br><br>
+            </div>
+            <div class="form-section2">
+                <input type="radio" id="kidscourse" name="course" value="kidscourse">
+                <label class="label1" for="kidscourse">Kurs za decu   </label>
+                <br>
+                <input type="radio" id="adultscourse" name="course" value="adultsscourse">
+                <label for="adultsscourse">Kurs za odrasle</label>
+                <br> <br>
+                <button class="btn" id="btn2" type="button">Dalje</button>
+                <br><br>
+            </div>
+            <div class="form-section3">
+                <select id="kidslist">
+                    <option value="">PlaySchool program</option>
+                    <option value="">Engleski za osnovce</option>
+                    <option value="">Francuski za osnovce</option>
+                    <option value="">Nemački za osnovce</option>
+                    <option value="">Engleski za srednjoškolce</option>
+                    <option value="">Francuski za srednjoškolce</option>
+                    <option value="">Nemački za srednjoškolce</option>
+                    <option value="">Individualna nastava</option>
+                    <option value="">Korektivna nastava</option>
+                    <option value="">Priprema za međunarodne ispite</option>
+                </select>
+                <br>
+                <select id="adultslist">
+                    <option value="">Engleski jezik</option>
+                    <option value="">Francuski jezik</option>
+                    <option value="">Nemački jezik</option>
+                    <option value="">Italijanski jezik</option>
+                    <option value="">Španski jezik</option>
+                    <option value="">Konverzacijski kursevi</option>
+                    <option value="">Ubrzani kursevi</option>
+                    <option value="">Refreshment courses</option>
+                    <option value="">Business English</option>
+                </select>
+                <br> <br>
+                <button class="btn" id="btn3" type="button">Dalje</button>
+                <br><br>
+            </div>
+            <div class="form-section4">
+                <p>Datum: <input type="text" id="datepicker"></p>
+                <br> <br>
+                <button class="btn2" onclick="validacija3();" type="button">Prijavi se</button>
+                <br><br>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footer-section1">
+            <h2>Kontakt informacije</h2>
+            <p>Telefon: <a href="tel:+38164111111" id="telefon" style="cursor: pointer;">064111111</a> </p>
+            <p>Email:<a href = "mailto: info@beelengual.rs" style="cursor: pointer;">info@beelengual.rs</a></p>
+            <p>Adresa: Jove Ilića 154, Beograd</p>
+            <p>Radno vreme:<ul>
+                <li>Ponedeljak-Petak: 9:00-17:30</li>
+                <li>Subota: 10:00-15:00 </li>
+            </ul></p>
+        </div>
+        <div class="footer-section2">
+            <h2>Zapratite nas na društvenim mrežama</h2>
+            <div class="footer-section2-container">
+                <a href="https://www.facebook.com/" style="cursor: pointer;"target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="https://www.instagram.com/" style="cursor: pointer;"target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.twitter.com/" style="cursor: pointer;" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.youtube.com/" style="cursor: pointer;" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="footer-section3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.3970177635333!2d20.472846415496956!3d44.772710779098794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a705762332ab5%3A0x422a527f1ff25cac!2sJove%20Ili%C4%87a%20154%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1607531371028!5m2!1sen!2srs" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
